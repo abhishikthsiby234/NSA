@@ -1,0 +1,15 @@
+#!/bin/bash
+
+echo "Enter the radius of the circle:"
+read r
+
+
+pi=3.1416
+
+
+area=$(echo "$pi * $r * $r" | bc -l)
+circumference=$(echo "2 * $pi * $r" | bc -l)
+
+echo "Area of the circle = $area"
+echo "Circumference of the circle = $circumference"
+
