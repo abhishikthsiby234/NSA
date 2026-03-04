@@ -1,0 +1,20 @@
+                                                                                        sum                                                                                                  
+#!/bin/bash
+
+echo "Enter numbers separated by spaces:"
+read -a numbers
+even_sum=0
+odd_sum=0  
+
+for num in "${numbers[@]}"
+do
+    if (( num % 2 == 0 )); then
+        (( even_sum += num ))
+    else
+        (( odd_sum += num ))
+    fi
+done
+
+echo "Sum of even numbers: $even_sum"
+echo "Sum of odd numbers: $odd_sum"
+
